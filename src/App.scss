@@ -1,45 +1,45 @@
 // Variables
-$primary-color: #007bff;
-$secondary-color: #6c757d;
+$primary-color: #007bff;     // Color primario
+$secondary-color: #6c757d;   // Color secundario
 
 // Estilos
 .app {
-  text-align: center;
-  padding: 20px;
+  text-align: center;        // Alinear al centro
+  padding: 20px;             // Añadir relleno
 
   h1 {
-    margin-bottom: 20px;
-    color: $primary-color;
+    margin-bottom: 20px;     // Margen inferior
+    color: $primary-color;   // Usar el color primario para el título
   }
 
   button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-right: 1%;
-    background-color: $primary-color;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    padding: 10px 20px;      // Añadir relleno al botón
+    font-size: 16px;         // Tamaño de fuente
+    cursor: pointer;         // Cambiar cursor a mano al pasar el ratón
+    margin-right: 1%;        // Margen derecho
+    background-color: $primary-color;  // Color de fondo del botón
+    color: white;            // Color del texto
+    border: none;            // Sin borde
+    border-radius: 5px;      // Radio del borde
+    transition: background-color 0.3s ease; // Transición de color de fondo
 
     &:hover {
-      background-color: darken($primary-color, 10%);
+      background-color: darken($primary-color, 10%); // Oscurecer el color de fondo al pasar el ratón
     }
   }
 
   input {
-    width: 100%;
-    max-width: 300px;
-    padding: 10px;
-    font-size: 18px;
-    border: 1px solid $secondary-color;
-    border-radius: 5px;
-    transition: border-color 0.3s ease;
+    width: 100%;             // Ancho completo
+    max-width: 300px;        // Ancho máximo
+    padding: 10px;           // Añadir relleno
+    font-size: 18px;         // Tamaño de fuente
+    border: 1px solid $secondary-color; // Borde sólido con color secundario
+    border-radius: 5px;      // Radio del borde
+    transition: border-color 0.3s ease; // Transición del color del borde
 
     &:focus {
-      border-color: $primary-color;
-      outline: none;
+      border-color: $primary-color;     // Cambiar el color del borde al enfocar
+      outline: none;                    // Eliminar el contorno predeterminado
     }
   }
 }
