@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './App.scss';
 
-function App() {
+const App = () => {
+  const [password, setPassword] = useState('');
+
+  const generatePassword = () => {
+    const length = 12;
+    const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-+=<>?";
+
+    let newPassword = '';
+    for (let i = 0; i < length; i++) {
+      newPassword += charset.charAt(Math.floor(Math.random() * charset.length));
+    }
+
+    setPassword(newPassword);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1>Generador de Contraseñas</h1>
+      <button onClick={generatePassword}>Generar Contraseña</button>
+      <input type="text" value={password} readOnly />
     </div>
   );
-}
+};
 
 export default App;
